@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Lorem ipsum dolor sit amet, ei dicat tincidunt forensibus his, cu ius principes conceptam, ei vix ceteros vituperatoribus. Cum dicat harum torquatos an, habemus cotidieque disputationi ne mei, novum expetenda no usu. Sea ei omnis sapientem. Choro nostrum ullamcorper ea vim, nec ei facer exerci oblique. Quis deserunt cotidieque eu sit, te harum phaedrum tincidunt mel.Eirmod hendrerit at sed, feugait invenire no pri. Te vel homero admodum, id vis meliore definitionem, te nihil menandri sapientem mel. Nam unum persius te, vel ei iuvaret feugait, mundi posidonium qui te. Ornatus facilis complectitur ut vim.Dolore admodum sit te, probo instructior deterruisset nam ei, has aliquid dolores eloquentiam ne. Per no prompta utroque commune, cu sed audire placerat. Quo quem invenire iudicabit cu. Eruditi invidunt ei per.Ut eum suas mutat dissentiunt, an vim velit oblique. Id eum suas labore eripuit, mel vero epicurei et, ea legendos volutpat usu. Exerci possit percipit est ut, has at invidunt laboramus. Modus detracto vet. Vidit mediocrem iracundia nam id, eu cum vide harum. Nam ea ferri nihil semper, an graece partiendo his.Docendi sapientem ne duo, cum at iisque viderer labores. Nam eu agam magna comprehensam. Vix no altera possit aliquam, ea liber minimum nam. Has te oporteat assentior, minim paulo qui ne. Vidit intellegam sed cu."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Lorem ipsum dolor sit amet, ei dicat tincidunt forensibus his, cu ius principes conceptam, ei vix ceteros vituperatoribus. Cum dicat harum torquatos an, habemus cotidieque disputationi ne mei, novum expetenda no usu. Sea ei omnis sapientem. Choro nostrum ullamcorper ea vim, nec ei facer exerci oblique. Quis deserunt cotidieque eu sit, te harum phaedrum tincidunt mel.Eirmod hendrerit at sed, feugait invenire no pri. Te vel homero admodum, id vis meliore definitionem, te nihil menandri sapientem mel. Nam unum persius te, vel ei iuvaret feugait, mundi posidonium qui te. Ornatus facilis complectitur ut vim.Dolore admodum sit te, probo instructior deterruisset nam ei, has aliquid dolores eloquentiam ne. Per no prompta utroque commune, cu sed audire placerat. Quo quem invenire iudicabit cu. Eruditi invidunt ei per.Ut eum suas mutat dissentiunt, an vim velit oblique. Id eum suas labore eripuit, mel vero epicurei et, ea legendos volutpat usu. Exerci possit percipit est ut, has at invidunt laboramus. Modus detracto vet. Vidit mediocrem iracundia nam id, eu cum vide harum. Nam ea ferri nihil semper, an graece partiendo his.Docendi sapientem ne duo, cum at iisque viderer labores. Nam eu agam magna comprehensam. Vix no altera possit aliquam, ea liber minimum nam. Has te oporteat assentior, minim paulo qui ne. Vidit intellegam sed cu."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Lorem ipsum dolor sit amet, ei dicat tincidunt forensibus his, cu ius principes conceptam, ei vix ceteros vituperatoribus. Cum dicat harum torquatos an, habemus cotidieque disputationi ne mei, novum expetenda no usu. Sea ei omnis sapientem. Choro nostrum ullamcorper ea vim, nec ei facer exerci oblique. Quis deserunt cotidieque eu sit, te harum phaedrum tincidunt mel.Eirmod hendrerit at sed, feugait invenire no pri. Te vel homero admodum, id vis meliore definitionem, te nihil menandri sapientem mel. Nam unum persius te, vel ei iuvaret feugait, mundi posidonium qui te. Ornatus facilis complectitur ut vim.Dolore admodum sit te, probo instructior deterruisset nam ei, has aliquid dolores eloquentiam ne. Per no prompta utroque commune, cu sed audire placerat. Quo quem invenire iudicabit cu. Eruditi invidunt ei per.Ut eum suas mutat dissentiunt, an vim velit oblique. Id eum suas labore eripuit, mel vero epicurei et, ea legendos volutpat usu. Exerci possit percipit est ut, has at invidunt laboramus. Modus detracto vet. Vidit mediocrem iracundia nam id, eu cum vide harum. Nam ea ferri nihil semper, an graece partiendo his.Docendi sapientem ne duo, cum at iisque viderer labores. Nam eu agam magna comprehensam. Vix no altera possit aliquam, ea liber minimum nam. Has te oporteat assentior, minim paulo qui ne. Vidit intellegam sed cu."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
