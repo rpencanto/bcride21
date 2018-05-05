@@ -104,6 +104,8 @@ public class Home extends AppCompatActivity
     //send alert
     IFCMService mService;
 
+    DatabaseReference driverAvailable;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +129,8 @@ public class Home extends AppCompatActivity
         //maps
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
 
         //geo fire
         ref = FirebaseDatabase.getInstance().getReference(Common.driver_tbl);
@@ -330,8 +334,22 @@ public class Home extends AppCompatActivity
             return;
         }
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation !=null)
-        {
+        if (mLastLocation !=null) {
+
+            //ep10 07:59
+            driverAvailable = FirebaseDatabase.getInstance().getReference(Common.driver_tbl);
+            driverAvailable.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    loadAvailableDriver();
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });//ep10 10:31
 
                 final double latitude = mLastLocation.getLatitude();
                 final double longitude = mLastLocation.getLongitude();
@@ -360,6 +378,11 @@ public class Home extends AppCompatActivity
     }
 
     private void loadAvailableDriver() {
+
+        mMap.clear();//ep10 05:53
+        mMap.addMarker(new MarkerOptions().position(new LatLng(mLastLocation.getLatitude(),mLastLocation.getLongitude()))
+                .title("You"));
+
         //Load available driver in 3km distance
         DatabaseReference driverLocation = FirebaseDatabase.getInstance().getReference(Common.driver_tbl);
         GeoFire gf = new GeoFire(driverLocation);
