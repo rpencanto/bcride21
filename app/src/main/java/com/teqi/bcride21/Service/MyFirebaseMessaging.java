@@ -1,6 +1,9 @@
 package com.teqi.bcride21.Service;
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -9,16 +12,20 @@ import com.google.gson.Gson;
 
 public class MyFirebaseMessaging extends FirebaseMessagingService {
     //Ctl+O
+    //ep11 10:37
 
     @Override
-    public void onMessageReceived(RemoteMessage remoteMessage) {
+    public void onMessageReceived(final RemoteMessage remoteMessage) {
+        //choose Handler from android.os
 
-        LatLng customer_location = new Gson().fromJson(remoteMessage.getNotification().getBody(),LatLng.class);
+        Handler handler = new Handler(Looper.getMainLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(MyFirebaseMessaging.this,""+remoteMessage.getNotification().getBody(),Toast.LENGTH_SHORT);
 
-        Intent intent = new Intent(getBaseContext(), CustomerCall.class);
-        intent.putExtra("lat",customer_location.latitude);
-        intent.putExtra("lng",customer_location.longitude);
+            }
+        });
 
-        startActivity(intent);
     }
 }

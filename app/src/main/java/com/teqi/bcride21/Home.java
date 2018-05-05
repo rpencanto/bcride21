@@ -186,7 +186,8 @@ public class Home extends AppCompatActivity
                             Token token = postSnapShot.getValue(Token.class);
 
                             String json_lat_lng = new Gson().toJson(new LatLng(mLastLocation.getLatitude(),mLastLocation.getLongitude()));
-                            Notification data = new Notification("TEQI",json_lat_lng);
+                            String customerToken = FirebaseInstanceId.getInstance().getToken();
+                            Notification data = new Notification(customerToken,json_lat_lng);//ep11 08:55
                             Sender content = new Sender(token.getToken(),data);
 
                             mService.sendMessage(content)
