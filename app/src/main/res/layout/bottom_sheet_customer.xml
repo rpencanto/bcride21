@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="16dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     app:cardElevation="10dp">
+
+    <!--ep14 08:05-->
 
     <LinearLayout
         android:padding="10dp"
@@ -12,24 +17,76 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:text="Lorem ipsum dolor sit amet, ei dicat tincidunt forensibus his, cu ius principes conceptam, ei vix ceteros vituperatoribus. Cum dicat harum torquatos an, habemus cotidieque disputationi ne mei, novum expetenda no usu. Sea ei omnis sapientem. Choro nostrum ullamcorper ea vim, nec ei facer exerci oblique. Quis deserunt cotidieque eu sit, te harum phaedrum tincidunt mel.Eirmod hendrerit at sed, feugait invenire no pri. Te vel homero admodum, id vis meliore definitionem, te nihil menandri sapientem mel. Nam unum persius te, vel ei iuvaret feugait, mundi posidonium qui te. Ornatus facilis complectitur ut vim.Dolore admodum sit te, probo instructior deterruisset nam ei, has aliquid dolores eloquentiam ne. Per no prompta utroque commune, cu sed audire placerat. Quo quem invenire iudicabit cu. Eruditi invidunt ei per.Ut eum suas mutat dissentiunt, an vim velit oblique. Id eum suas labore eripuit, mel vero epicurei et, ea legendos volutpat usu. Exerci possit percipit est ut, has at invidunt laboramus. Modus detracto vet. Vidit mediocrem iracundia nam id, eu cum vide harum. Nam ea ferri nihil semper, an graece partiendo his.Docendi sapientem ne duo, cum at iisque viderer labores. Nam eu agam magna comprehensam. Vix no altera possit aliquam, ea liber minimum nam. Has te oporteat assentior, minim paulo qui ne. Vidit intellegam sed cu."
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/ic_pin_drop_black_24dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            
 
         <TextView
-            android:layout_marginTop="10dp"
-            android:text="Lorem ipsum dolor sit amet, ei dicat tincidunt forensibus his, cu ius principes conceptam, ei vix ceteros vituperatoribus. Cum dicat harum torquatos an, habemus cotidieque disputationi ne mei, novum expetenda no usu. Sea ei omnis sapientem. Choro nostrum ullamcorper ea vim, nec ei facer exerci oblique. Quis deserunt cotidieque eu sit, te harum phaedrum tincidunt mel.Eirmod hendrerit at sed, feugait invenire no pri. Te vel homero admodum, id vis meliore definitionem, te nihil menandri sapientem mel. Nam unum persius te, vel ei iuvaret feugait, mundi posidonium qui te. Ornatus facilis complectitur ut vim.Dolore admodum sit te, probo instructior deterruisset nam ei, has aliquid dolores eloquentiam ne. Per no prompta utroque commune, cu sed audire placerat. Quo quem invenire iudicabit cu. Eruditi invidunt ei per.Ut eum suas mutat dissentiunt, an vim velit oblique. Id eum suas labore eripuit, mel vero epicurei et, ea legendos volutpat usu. Exerci possit percipit est ut, has at invidunt laboramus. Modus detracto vet. Vidit mediocrem iracundia nam id, eu cum vide harum. Nam ea ferri nihil semper, an graece partiendo his.Docendi sapientem ne duo, cum at iisque viderer labores. Nam eu agam magna comprehensam. Vix no altera possit aliquam, ea liber minimum nam. Has te oporteat assentior, minim paulo qui ne. Vidit intellegam sed cu."
-            android:layout_width="wrap_content"
+            android:id="@+id/txtLocation"
+            android:layout_weight="9"
+            android:text="Location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_map_black_24dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
 
+
         <TextView
+            android:id="@+id/txtDestination"
+            android:gravity="center_vertical"
             android:layout_marginTop="10dp"
-            android:text="Lorem ipsum dolor sit amet, ei dicat tincidunt forensibus his, cu ius principes conceptam, ei vix ceteros vituperatoribus. Cum dicat harum torquatos an, habemus cotidieque disputationi ne mei, novum expetenda no usu. Sea ei omnis sapientem. Choro nostrum ullamcorper ea vim, nec ei facer exerci oblique. Quis deserunt cotidieque eu sit, te harum phaedrum tincidunt mel.Eirmod hendrerit at sed, feugait invenire no pri. Te vel homero admodum, id vis meliore definitionem, te nihil menandri sapientem mel. Nam unum persius te, vel ei iuvaret feugait, mundi posidonium qui te. Ornatus facilis complectitur ut vim.Dolore admodum sit te, probo instructior deterruisset nam ei, has aliquid dolores eloquentiam ne. Per no prompta utroque commune, cu sed audire placerat. Quo quem invenire iudicabit cu. Eruditi invidunt ei per.Ut eum suas mutat dissentiunt, an vim velit oblique. Id eum suas labore eripuit, mel vero epicurei et, ea legendos volutpat usu. Exerci possit percipit est ut, has at invidunt laboramus. Modus detracto vet. Vidit mediocrem iracundia nam id, eu cum vide harum. Nam ea ferri nihil semper, an graece partiendo his.Docendi sapientem ne duo, cum at iisque viderer labores. Nam eu agam magna comprehensam. Vix no altera possit aliquam, ea liber minimum nam. Has te oporteat assentior, minim paulo qui ne. Vidit intellegam sed cu."
-            android:layout_width="wrap_content"
+            android:text="Destination"
+            android:layout_width="0dp"
+            android:layout_weight="9"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
 
-</android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_attach_money_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/txtCalculate"
+            android:text="10km+10mins = $100"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
