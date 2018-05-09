@@ -94,7 +94,7 @@ public class Home extends AppCompatActivity
     DatabaseReference ref;
     GeoFire geoFire;
 
-    Marker mCustomerMarker;
+    Marker mCustomerMarker,markerDestination;
     //bottomsheet
     ImageView imgExpandable;
     BottomSheetCustomerFragment mBottomSheet;
@@ -202,7 +202,7 @@ public class Home extends AppCompatActivity
                             .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(place.getLatLng(),15.0f));//ep14 13:02
 
-                BottomSheetCustomerFragment mBottomSheet = BottomSheetCustomerFragment.newInstance(mPlaceLocation,mPlaceDestination);
+                BottomSheetCustomerFragment mBottomSheet = BottomSheetCustomerFragment.newInstance(mPlaceLocation,mPlaceDestination,false);
                 mBottomSheet.show(getSupportFragmentManager(),mBottomSheet.getTag());
 
             }
@@ -599,6 +599,24 @@ public class Home extends AppCompatActivity
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setZoomGesturesEnabled(true);
         mMap.setInfoWindowAdapter(new CustomInfoWindow(this));
+
+        //ep17 0712, 0836
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+                if (markerDestination != null)
+                    markerDestination.remove();
+                markerDestination = mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+                .position(latLng)
+                .title("Destination"));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,15.0f));
+
+                BottomSheetCustomerFragment mBottomSheet = BottomSheetCustomerFragment.newInstance(String.format("%f,%f,",mLastLocation.getLatitude(),mLastLocation.getLongitude()),
+                        String.format("%f,%f",latLng.latitude,latLng.longitude),true);//ep17 10:11
+                mBottomSheet.show(getSupportFragmentManager(),mBottomSheet.getTag());
+
+            }
+        });
 
     }
 
